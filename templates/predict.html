@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Predict Engagement</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#eef5ff;
+text-align:center;
+}
+
+.form-box{
+width:50%;
+margin:auto;
+margin-top:50px;
+background:white;
+padding:30px;
+border-radius:10px;
+}
+
+input{
+width:80%;
+padding:10px;
+margin:10px;
+}
+
+button{
+background:#3498db;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h1>Step 4 : Predict Engagement</h1>
+
+<form action="/predict" method="POST">
+
+<input type="number" name="login" placeholder="Login Frequency" required><br>
+
+<input type="number" name="forum" placeholder="Forum Participation" required><br>
+
+<input type="number" name="assignment" placeholder="Assignment Submission" required><br>
+
+<input type="number" name="resource" placeholder="Resource Access Frequency" required><br>
+
+<input type="number" name="quiz" placeholder="Quiz Score" required><br>
+
+<button type="submit">
+Predict
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
