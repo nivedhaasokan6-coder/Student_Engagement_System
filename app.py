@@ -4,21 +4,13 @@ import joblib
 
 app = Flask(__name__)
 
-# Load dataset
 df = pd.read_csv("student_engagement_dataset.csv")
 
-# Load trained model
 model = joblib.load("model.pkl")
 le = joblib.load("label_encoder.pkl")
-
-
-# STEP 1 - Collect Dataset
 @app.route("/")
 def home():
     return send_file("index.html")
-
-
-# STEP 2 - Preprocess Data
 @app.route("/preprocess")
 def preprocess():
 
@@ -29,8 +21,6 @@ def preprocess():
         missing=missing
     )
 
-
-# STEP 3 - Analyze Student Activities
 @app.route("/analysis")
 def analysis():
 
@@ -43,14 +33,10 @@ def analysis():
         quiz_avg=quiz_avg
     )
 
-
-# STEP 4 - Predict Engagement Page
 @app.route("/predictpage")
 def predictpage():
     return render_template("predict.html")
 
-
-# STEP 5 - Display Result
 @app.route("/predict", methods=["POST"])
 def predict():
 
