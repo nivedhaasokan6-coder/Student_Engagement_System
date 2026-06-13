@@ -7,26 +7,50 @@
 <style>
 
 body{
-font-family:Arial;
-background:#fff8e1;
-text-align:center;
-margin-top:100px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #fff3cd, #ffe0b2);
+    margin: 0;
+    padding: 0;
 }
 
 .card{
-width:60%;
-margin:auto;
-background:white;
-padding:30px;
-border-radius:10px;
+    width: 60%;
+    margin: 80px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1{
+    color: #ef6c00;
+}
+
+p{
+    font-size: 18px;
+    color: #444;
+}
+
+.info{
+    background: #fff8e1;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 button{
-background:orange;
-color:white;
-padding:12px 25px;
-border:none;
-border-radius:5px;
+    background: #ef6c00;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #e65100;
 }
 
 </style>
@@ -37,14 +61,25 @@ border-radius:5px;
 
 <div class="card">
 
-<h1>Step 3 : Analyze Student Activities</h1>
+<h1>Student Activity Analysis</h1>
 
-<p>Average Login Frequency : {{ login_avg }}</p>
+<p>
+This section provides a summary of student engagement data.
+The analysis helps identify learning patterns and overall participation levels.
+</p>
 
-<p>Average Quiz Score : {{ quiz_avg }}</p>
+<div class="info">
+    <p><strong>Average Login Frequency:</strong> {{ login_avg }}</p>
+    <p><strong>Average Quiz Score:</strong> {{ quiz_avg }}</p>
+</div>
+
+<p>
+The above statistics help evaluate student performance and engagement.
+These insights are used for predicting future engagement levels.
+</p>
 
 <a href="/predictpage">
-<button>Next</button>
+    <button>Proceed to Prediction ➜</button>
 </a>
 
 </div>
