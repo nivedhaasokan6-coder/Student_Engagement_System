@@ -7,26 +7,50 @@
 <style>
 
 body{
-font-family:Arial;
-background:#eafaf1;
-text-align:center;
-margin-top:100px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d4fc79, #96e6a1);
+    margin: 0;
+    padding: 0;
 }
 
 .box{
-width:60%;
-margin:auto;
-background:white;
-padding:30px;
-border-radius:10px;
+    width: 60%;
+    margin: 80px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1{
+    color: #2e7d32;
+}
+
+p{
+    font-size: 18px;
+    color: #444;
+}
+
+.info{
+    background: #f1f8e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 button{
-background:green;
-color:white;
-padding:12px 25px;
-border:none;
-border-radius:5px;
+    background: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #1b5e20;
 }
 
 </style>
@@ -37,14 +61,27 @@ border-radius:5px;
 
 <div class="box">
 
-<h1>Step 2 : Preprocess Data</h1>
+<h1>📊 Step 2 : Data Preprocessing</h1>
 
-<p>Missing Values : {{ missing }}</p>
+<p>
+Data preprocessing is an important step in machine learning.
+It helps improve the quality of the dataset before analysis and prediction.
+</p>
 
-<p>Dataset Cleaned Successfully</p>
+<div class="info">
+    <p><strong>Total Missing Values Found:</strong> {{ missing }}</p>
+    <p>✅ Dataset cleaned successfully.</p>
+    <p>✅ Data is ready for analysis.</p>
+    <p>✅ Preprocessing completed without errors.</p>
+</div>
+
+<p>
+The cleaned dataset can now be used to generate insights and
+perform student engagement analysis.
+</p>
 
 <a href="/analysis">
-<button>Next</button>
+    <button>Proceed to Analysis ➜</button>
 </a>
 
 </div>
