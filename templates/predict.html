@@ -7,32 +7,51 @@
 <style>
 
 body{
-font-family:Arial;
-background:#eef5ff;
-text-align:center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #dbeafe, #eef5ff);
+    margin: 0;
+    padding: 0;
 }
 
 .form-box{
-width:50%;
-margin:auto;
-margin-top:50px;
-background:white;
-padding:30px;
-border-radius:10px;
+    width: 55%;
+    margin: 60px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1{
+    color: #2980b9;
+}
+
+p{
+    color: #555;
+    font-size: 17px;
 }
 
 input{
-width:80%;
-padding:10px;
-margin:10px;
+    width: 80%;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button{
-background:#3498db;
-color:white;
-padding:12px 25px;
-border:none;
-border-radius:5px;
+    background: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #2874a6;
 }
 
 </style>
@@ -43,7 +62,11 @@ border-radius:5px;
 
 <div class="form-box">
 
-<h1>Step 4 : Predict Engagement</h1>
+<h1>🤖 Step 4 : Predict Student Engagement</h1>
+
+<p>
+Enter the student activity details below to predict the engagement level using the machine learning model.
+</p>
 
 <form action="/predict" method="POST">
 
@@ -58,10 +81,14 @@ border-radius:5px;
 <input type="number" name="quiz" placeholder="Quiz Score" required><br>
 
 <button type="submit">
-Predict
+Predict Engagement
 </button>
 
 </form>
+
+<p>
+The system analyzes the entered data and predicts whether the student's engagement level is Low, Medium, or High.
+</p>
 
 </div>
 
